@@ -439,7 +439,7 @@ app.post('/api/site/site_data',auth,admin,(req,res)=>{
 const rootDir=require('./util/path');
   const path= require('path');
   app.use((req,res)=>{
-     res.send(<h1>Hi</h1>);
+     res.send('<h1>Hi</h1>');
   });
 // if (process.env.NODE_ENV === "production") {
 //   app.use(express.static("client/build"));
