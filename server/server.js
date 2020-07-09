@@ -428,11 +428,18 @@ app.post('/api/site/site_data',auth,admin,(req,res)=>{
 
 
 //Default
+// if(process.env.NODE_ENV === 'production'){
+//      const path= require('path');
+//      app.get((req,res)=>{
+//         res.sendFile(path.join(__dirname,'../','client','public','index.html'));
+//      });
+// }
+
 if(process.env.NODE_ENV === 'production'){
-     const path= require('path');
-     app.get((req,res)=>{
-        res.sendFile(path.join(__dirname,'../','client','public','index.html'));
-     });
+  const path= require('path');
+  app.get((req,res)=>{
+     res.send(<h1>Hi</h1>);
+  });
 }
 
 // if (process.env.NODE_ENV === "production") {
