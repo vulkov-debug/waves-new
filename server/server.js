@@ -435,14 +435,12 @@ app.post('/api/site/site_data',auth,admin,(req,res)=>{
 //      });
 // }
 
-if(process.env.NODE_ENV === "production"){
-  const rootDir=require('./util/path');
+
+const rootDir=require('./util/path');
   const path= require('path');
   app.use((req,res)=>{
      res.send(<h1>Hi</h1>);
   });
-}
-
 // if (process.env.NODE_ENV === "production") {
 //   app.use(express.static("client/build"));
 //   const path = require('path');
