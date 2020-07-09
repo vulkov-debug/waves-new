@@ -435,9 +435,10 @@ app.post('/api/site/site_data',auth,admin,(req,res)=>{
 //      });
 // }
 
-if(process.env.NODE_ENV === 'production'){
+if(process.env.NODE_ENV === "production"){
+  const rootDir=require('./util/path');
   const path= require('path');
-  app.get((req,res)=>{
+  app.use((req,res)=>{
      res.send(<h1>Hi</h1>);
   });
 }
